@@ -1,3 +1,3 @@
 # VanillaCalculator
 
-![image](https://user-images.githubusercontent.com/122852487/215945822-dbdec3e6-4bff-453a-a662-e8680754d537.png)
+![image](https://user-images.githubusercontent.com/122852487/215946154-9f6f6724-9b03-4fd9-93d2-b4ecc7a72cff.png)
