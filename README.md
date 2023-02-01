@@ -1,6 +1,6 @@
 # VanillaCalculator [(Open)](https://vanilla-calculator-two.vercel.app/)
 
-A (really) simple calculator frontend I've made for fun - using pure JavaScript and css animations.
+A (really) simple calculator frontend I've made for fun - using pure JavaScript and CSS animations.
 
 Cool thing: the calculator interacts with your real laptop keyboard keys at real time.
 
