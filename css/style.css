@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kaushan+Script&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Share+Tech+Mono&display=swap');
+
+:root{
+    --hand: 'Kaushan Script', cursive;
+    --mont: 'Montserrat', sans-serif;
+    --tech: 'Share Tech Mono', monospace;
+    --vibes: 'Great Vibes', cursive;
+    /* --theme: #1dca99; */
+    --theme: #ff6600;;
+    --savedTheme: #ff6600;
+    --shadow: drop-shadow(0 0 10px #000);
+}
+
+.hide{ display: none !important }
+
+*{ margin:0; padding:0; box-sizing: border-box; font-family: var(--mont) }
+
+#theme-picker{
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+#theme-picker i{
+    color: #ccc;
+    cursor: pointer;
+    position: relative;
+}
+#theme-picker i.reseter::after{
+    display: block; 
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: -2px;
+    width: 20px;
+    height: 3px;
+    background: var(--savedTheme);
+    border: none;
+    border-radius: 10px;
+}
+#theme-picker i:hover{
+    color: #fff;
+}
+.vignette {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
+    pointer-events: none;
+  }
+
+.animarValor{
+    animation-name: valor;
+    animation-duration: .08s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+body {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    box-shadow: 0 0 10px black inset;
+}
+
+body > section {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    /* flex-direction: column; */
+
+    background: linear-gradient(45deg, rgb(63 0 79), rgb(163 57 222));
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 900px){
+    body > section {
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+.texts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.texts h1{
+    font-size: 2.5rem;
+    font-family: var(--vibes);
+    color: var(--theme);
+    /* filter: var(--shadow); */
+    /* text-shadow: -4px 3px 0px #007780; /* Firefox 3.5+, Opera 9+, Safari 1+, Chrome, IE10 */
+    /* filter: progid:DXImageTransform.Microsoft.Glow(Color=#ffffff,Strength=1); IE<10 */ */
+}
+
+.texts .icons{
+    display: flex; align-items: center;
+    color: #ccc;
+    gap: 1rem;
+}
+.texts .icons i{
+    color: #ccc;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 900px){
+    .texts {
+        display: none;
+    }
+}
+
+@keyframes valor{
+    0%{  background: #ccc;}
+    50%{ background: #fff;}
+    100%{background: #ccc;}
+}
+
+
+.animarBotao{
+    animation-name: botao;
+    animation-duration: .05s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes botao{
+    0%{ 
+        transform: translateY(-5px);
+        box-shadow: 0 5px 1px #171717;
+        border-top: 1px solid #cccccc2e;
+        border-left: 1px solid #cccccc2e;
+    }
+    100%{
+        transform: translateY(0);
+        box-shadow: 0 0 1px #171717;
+        border: none !important;
+    }
+}
+
+
+.btn{
+    cursor: pointer;
+    transition: .12s ease-in-out;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 1px #171717;
+    user-select: none;
+    font-size: 1.62rem;
+    text-transform: uppercase;
+    border-top: 1px solid #cccccc2e !important;
+    border-left: 1px solid #cccccc2e !important;
+    background: #333;
+}
+.btn:active{
+    transform: translateY(0);
+    box-shadow: 0 0 1px #171717;
+    border: none !important;
+}
+
+#calculadora{
+       /* margin: 0 auto; */
+    /* margin-top: 30px; */
+    background: #444;
+    width: 300px;
+    height: fit-content;
+    border-radius: 7px;
+    padding: 8px;
+    padding-bottom: 0;
+    /* box-shadow: 0 5px 10px #171717; */
+    /* filter: var(--shadow); */
+    border: 3px ridge #ffffff29;
+}
+
+#calculadora *{
+    border-radius: inherit;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background: #ccc;
+    margin-bottom: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 8px;
+    font-size: 2rem;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    box-shadow: 0 0 6px black inset;
+    font-family: var(--tech);
+}
+
+main{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    width: 100%;
+    height: calc(100% - 50px);
+}
+
+.limpar{
+    height: 50px;
+    width: 100%;
+    color: #fff;
+    border: 2px solid transparent;
+    display: grid;
+    place-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+main .numeros{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 2px;
+    height: fit-content;
+    justify-content: flex-end
+}
+
+main .numeros div{
+    border: 2px solid transparent;
+    width: 30%;
+    height: 60px;
+    margin: 0 auto;
+    color: #fff;
+    margin-bottom: 8px;
+    display: grid; place-items: center;
+    cursor: pointer;
+}
+
+main .operacoes{
+    display:flex;
+    flex-direction: column;
+    gap:2px;
+    align-items: flex-end;
+}
+
+main .operacoes .operacao{
+    width: calc(100% - 8px);
+    height: 60px;
+    background: #555;
+    /* margin: 0 auto; */
+    border: 2px solid transparent;
+    cursor: pointer;
+    color: black;
+    display: grid;
+    place-items: center;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+
+[data-ultimo]{
+    margin-left: 0 !important;
+    margin-right: 4px !important;
+}
+
+.calcular{
+    background: var(--theme);
+    margin-left: 2px !important;
+    margin-right: 2px !important;
+}
+
+footer{
+    background: #111;
+    width: 100%;
+    color: #ccc;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    /* box-shadow: 0 -26px 65px black; */
+    gap: 1.2rem;
+    padding: .7rem;
+}
+footer i {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+footer i:hover {
+    color: #fff;
+}

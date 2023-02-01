@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=,, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/288f9d4ee1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="vignette"></div>
+
+    <div id="theme-picker" class="hide">
+        <input type="color" name="color" id="color">
+        <!-- <i class="fas fa-save saver"></i> -->
+        <i class="fas fa-sync reseter"></i>
+    </div>
+
+    <section>
+
+        <div class="texts">
+            <h1>Vanilla Calculator</h1>
+            <div class="icons">
+                <i class="fas fa-mouse"></i>
+                <span>or</span>
+                <i class="fas fa-keyboard"></i>
+            </div>
+        </div>
+
+        <div id="calculadora">
+            
+            <header class="animarValor">0</header>
+
+            <div class="limpar btn" data-inputs='escape#delete#backspace' >
+                Clear
+            </div>
+            
+            <main>
+
+                <div class="numeros">
+
+                    <div class="numero btn" data-inputs='7' data-val="7">7</div>
+                    <div class="numero btn" data-inputs='8' data-val="8">8</div>
+                    <div class="numero btn" data-inputs='9' data-val="9">9</div>
+                    
+                    <div class="numero btn" data-inputs='4' data-val="4">4</div>
+                    <div class="numero btn" data-inputs='5' data-val="5">5</div>
+                    <div class="numero btn" data-inputs='6' data-val="6">6</div>
+
+                    <div class="numero btn" data-inputs='1' data-val="1">1</div>
+                    <div class="numero btn" data-inputs='2' data-val="2">2</div>
+                    <div class="numero btn" data-inputs='3' data-val="3">3</div>
+                    
+                    <div class="numero btn" data-inputs='.#,#,' data-val=".">.</div>
+                    <div data-ultimo class="numero btn" data-inputs='0' data-val="0">0</div>
+                    <div class="calcular btn" data-inputs='=#enter#spacebar#space' data-val="=">
+                        <i class="fas fa-equals"></i>
+                    </div>
+
+                </div>
+
+                <div class="operacoes">
+
+                    <div class="operacao btn" data-inputs='-#m' data-val="-">
+                        <i class="fas fa-minus"></i>
+                    </div>
+
+                    <div class="operacao btn" data-inputs='+#p' data-val="+">
+                        <i class="fas fa-plus"></i>
+                    </div>
+
+                    <div class="operacao btn" data-inputs='/#d' data-val="/">
+                        <i class="fas fa-divide"></i>
+                    </div>
+                    
+                    <div class="operacao btn" data-inputs='*#x#t' data-val="*">
+                        <i class="fas fa-times"></i>
+                    </div>
+
+
+                </div>
+
+            </main>
+        
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <a href="https://linkedin.com/in/diegohart/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        
+        <a href="https://github.com/diegohartmann/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+        </a>
+        
+        <a href="https://diegohart.com/" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-user-circle"></i>
+        </a>
+        
+
+    </footer>
+
+    <script type="module" src="js/script.js">  </script>
+    
+</body>
+</html>
