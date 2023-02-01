@@ -1,4 +1,4 @@
-# VanillaCalculator [see](https://vanilla-calculator-two.vercel.app/)
+# VanillaCalculator [(Open)](https://vanilla-calculator-two.vercel.app/)
 ### A (really) simple calculator frontend I've made for fun - using pure JavaScript and css animations.
 ![image](https://user-images.githubusercontent.com/122852487/215947342-fe158fba-49cd-438f-aa9c-d28d09febe00.png)
 ### You can press the calculator buttons using the numbers on your laptop keyboard.
