@@ -1,4 +1,4 @@
-# VanillaCalculator [(Open)](vanillacalculator.vercel.app)
+# VanillaCalculator [(Open)](https://vanillacalculator.vercel.app/) 
 
 A (really) simple calculator frontend I've made for fun - using pure JavaScript and CSS animations. No libs, or frameworks.
 
